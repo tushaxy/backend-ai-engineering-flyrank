@@ -1,0 +1,10 @@
+version: "1.0"
+service_name: "flyrank-capstone-widget-platform"
+run: "docker compose up -d --build"
+seed: "python -m src.seed_demo_data"
+base_url: "http://localhost:8000"
+endpoints:
+  public_script: "/widget.js"
+  public_config: "/api/v1/public/widgets/w_demo_123/config"
+  public_submit: "/api/v1/public/widgets/w_demo_123/submit"
+  dashboard_stats: "/api/v1/admin/widgets/w_demo_123/stats"
